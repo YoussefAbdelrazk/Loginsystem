@@ -64,13 +64,9 @@ async function getRecipe(){
   recipes.forEach((recipe)=> {
     var html = `
       <div class="col-lg-4 d-flex align-items-stretch ">
-          <div class="card mb-4 shadow-sm ">
-              <img src="${recipe.image_url}" class="card-img-top w-100 " alt="${recipe.title}">
-              <div class="card-body">
-                  <h5 class="card-title">${recipe.title}</h5>
-                  <p class="card-text">Publisher: ${recipe.publisher}</p>
-                  <a href="${recipe.source_url}" target="_blank" class="btn btn-primary">View Recipe</a>
-              </div>
+          <div class=" mb-4 shadow-sm  ">
+              <img src="${recipe.image_url}" class=" w-100 h-75 img-fluid " alt="${recipe.title}">
+              <h2 class="text-primary text-center"> ${recipe.title}</h2>
           </div>
       </div>`;
     recipesContainer.innerHTML += html;
